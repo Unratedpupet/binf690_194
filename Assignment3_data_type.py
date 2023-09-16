@@ -10,8 +10,9 @@ d = 17
 S = "CGCAGTTGTATTGCTTCCCACATTTATTAGACCACCTATTAAAAATGGATTTCTTCCCATTTCAAGCTGCCCACAAATCTCGCTCCTGATACGTTCTTCACTTCAAGCCGTAGCATCCCAATATCAGAAGCGGCGCCGGACTTGTTTTCAAAATATCCACGTATCCCTTCTTTCTCTTTCAATAGAAAACACCCATTGGTTCCGAAATAACGCATCTTATACTGTGGCTTATTGGCGTTACCC"
 
 # Question 1: Assume right angle triangle with base = b and height = a. Return the length of the hypotenuse
+hypotenuse = (a**2 + b**2)**0.5
 
-
+print(f"The hypotenuse of the triangle with a base of {b} and a height of {a} is {hypotenuse}")
 
 # Question 2: Assume a rectangle of length = c and width = d. 
 # 1. Return the area of the rectangle
