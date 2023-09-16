@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import math
 
 # Setting up variables for questions 1-4 using positive integer values
 a = 12
@@ -12,7 +13,7 @@ S = "CGCAGTTGTATTGCTTCCCACATTTATTAGACCACCTATTAAAAATGGATTTCTTCCCATTTCAAGCTGCCCACA
 # Question 1: Assume right angle triangle with base = b and height = a. Return the length of the hypotenuse
 hypotenuse = (a**2 + b**2)**0.5
 
-print(f"The hypotenuse of the triangle with a base of {b} and a height of {a} is {hypotenuse}")
+print(f"The hypotenuse of the triangle with a base of {b} and a height of {a} is {hypotenuse}.")
 
 # Question 2: Assume a rectangle of length = c and width = d. 
 # 1. Return the area of the rectangle
@@ -21,14 +22,18 @@ print(f"The hypotenuse of the triangle with a base of {b} and a height of {a} is
 rect_area = c * d
 rect_perimeter = c + c + d + d
 
-print(f"The area of the rectangle with length {c} and height {d} is {rect_area}")
-print(f"The perimeter of the rectangle with length {c} and height {d} is {rect_perimeter}")
+print(f"The area of the rectangle with length {c} and height {d} is {rect_area}.")
+print(f"The perimeter of the rectangle with length {c} and height {d} is {rect_perimeter}.")
 
 # Question 3: Assume a circle where radius = a.
 # 1. Return the area of the circle
 # 2. Return the circumference of the circle.
 
+circle_area = math.pi * a**2
+print(f"The area of the circle where the radius is {a} is {circle_area:.5f}.")
 
+circle_circumference = 2 * math.pi * a
+print(f"The circumference of a circle with a radius of {a} is {circle_circumference:.5f}.")
 
 # Question 4: Given a string S of any length and four integers a, b, c, and d
 # 1. Slice the string S from indices a through b and c through d (with a space in between) inclusively
