@@ -18,8 +18,11 @@ print(f"The hypotenuse of the triangle with a base of {b} and a height of {a} is
 # 1. Return the area of the rectangle
 # 2. Return the perimeter of the rectangle
 
+rect_area = c * d
+rect_perimeter = c + c + d + d
 
-
+print(f"The area of the rectangle with length {c} and height {d} is {rect_area}")
+print(f"The perimeter of the rectangle with length {c} and height {d} is {rect_perimeter}")
 
 # Question 3: Assume a circle where radius = a.
 # 1. Return the area of the circle
