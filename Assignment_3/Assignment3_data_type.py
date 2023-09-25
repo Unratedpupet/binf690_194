@@ -58,14 +58,58 @@ print(SEPERATOR)
 
 # Question 5: Given a DNA string S
 # 1. Find first and last location of stop codon 'TAG' and report its starting locations
-# 2. Split the DNA string by stop codon 'TAG' and report wach fragment and their respective lengths
+# 2. Split the DNA string by stop codon 'TAG' and report each fragment and their respective lengths
 # 3. Report percent GC of original DNA string S
 # 4. Report number of A, C, T, and G
 
+# Finds the first and last instance of the stop codon 'TAG'
+first_stop = S.find('TAG')
+last_stop = S.rfind('TAG')
 
+print(f"The start location for the first stop codon is at index: {first_stop}")
+print(f"The start location for the last stop codon is at index: {last_stop}")
 
+# Splits the S string into a list, seperated by the stop codon 'TAG'
+split_S = S.split('TAG')
 
+# Counts the number of fragments in the list to verify the correct number of fragments
+fragment_count = len(split_S)
 
+first_split_length = len(split_S[0])
+second_split_length = len(split_S[1])
+third_split_length = len(split_S[2])
+fourth_split_length = len(split_S[3])
+
+print(f"There are {fragment_count} fragments in the given DNA sequence.")
+print(f"The first fragment is {split_S[0]} which has a length of {first_split_length}.")
+print(f"The second fragment is {split_S[1]} which has a length of {second_split_length}.")
+print(f"The third fragment is {split_S[2]} which has a length of {third_split_length}.")
+print(f"The fourth fragment is {split_S[3]} which has a length of {fourth_split_length}.")
+
+# Initializes variables to allow for counting, setting all to 0
+a_count, t_count, g_count, c_count = 0,0,0,0
+nucleotide_count = len(S)
+
+# Iterates through the DNA string, and counts the nucleotides
+for char in S:
+    if char == 'A':
+        a_count += 1
+    elif char == 'T':
+        t_count +=1
+    elif char == 'G':
+        g_count += 1
+    else:
+        c_count += 1
+
+percent_gc = (g_count + c_count) / nucleotide_count
+
+print(f"The percent GC in the given DNA sequence is {percent_gc:.5f}.")
+print(f"The number of Adenine is {a_count}")
+print(f"The number of Thymine is {t_count}")
+print(f"The number of Guanine is {g_count}")
+print(f"The number of Cytosine is {c_count}")
+
+print(SEPERATOR)
 
 
 
