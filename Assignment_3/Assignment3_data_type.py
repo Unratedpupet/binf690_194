@@ -47,10 +47,12 @@ print(SEPERATOR)
 ab_slice = S[a:b+1]
 cd_slice = S[c:d+1]
 reversed_string = S[::-1]
+reversed_string_as_object = ''.join(reversed(S))
 
 print(f"Here is the AB slice of string S: {ab_slice}")
 print(f"Here is the CD slice of string S: {cd_slice}")
-print(f"Here is the reversed copy of string S: {reversed_string}")
+print(f"Here is the reversed copy of string S using reverse indexing: {reversed_string}")
+print(f"Here is the reversed copy of string S using the object and .join function: {reversed_string}")
 print(SEPERATOR)
 
 
@@ -59,6 +61,11 @@ print(SEPERATOR)
 # 2. Split the DNA string by stop codon 'TAG' and report wach fragment and their respective lengths
 # 3. Report percent GC of original DNA string S
 # 4. Report number of A, C, T, and G
+
+
+
+
+
 
 
 
