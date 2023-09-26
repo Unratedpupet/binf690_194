@@ -112,7 +112,6 @@ print(f"The number of Cytosine is {c_count}")
 print(SEPERATOR)
 
 
-
 # Question 6: Given two lists
 # a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 # b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -120,3 +119,36 @@ print(SEPERATOR)
 # 2. Return a list of all common elements
 # 3. Return a list of all elements
 
+# Initialize the lists
+a_list = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+# Create a list of all elements by joining the two lists
+ab_combined_list = a_list+b_list
+
+# Initilize a new list for unique elements, then iterate through the combined list 
+# and add the element to the list if it is not already in the list
+unique_elements = []
+for element in ab_combined_list:
+    if element not in unique_elements:
+        unique_elements.append(element)
+
+# Initialize a new list for common elements. Then, using a nested for loop, compare elements in both
+# lists to check if they are common, then add them to the common list
+# The second iteration removes redundencies of the common elements ie the two '1's in the first list
+
+common_elements_not_unique = []
+common_elements_unique = []
+for a_list_element in a_list:
+    for b_list_element in b_list:
+        if a_list_element == b_list_element:
+            common_elements_not_unique.append(a_list_element)
+
+for common_element in common_elements_not_unique:
+    if common_element not in common_elements_unique:
+        common_elements_unique.append(common_element)
+
+
+print(f"The list of unique elements is {unique_elements}.")
+print(f"The list of common elements is {common_elements_unique}.")
+print(f"The combined list of all elements is {ab_combined_list}.")
